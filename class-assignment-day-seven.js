@@ -117,6 +117,42 @@ else if (month === 2) {
 else {
     console.log("Invalid month")
 }
+
+
+let days;
+
+switch (month.toLowerCase()) {
+  case 'january':
+  case 'march':
+  case 'may':
+  case 'july':
+  case 'august':
+  case 'october':
+  case 'december':
+    console.log("No of days are 31");
+    break;
+  case 'april':
+  case 'june':
+  case 'september':
+  case 'november':
+    console.log("No of days are 30");
+    break;
+  case 'february':
+    if (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) {
+      console.log("No of days are 29");
+    } else {
+      console.log("No of days are 28");
+    }
+    break;
+  default:
+    console.log("Invalid month");
+    break;
+}
+
+
+
+
+
 // 9. Write a program to check whether the year is leap year or not.
 (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) ? console.console.log("It's a leap year") : console.console.log("It's not a leap year")
 
