@@ -27,7 +27,7 @@ if (myAge > yourAge)
 return "You are older than me"
 
 // WAY 2
-myAge > yourAge ? console.log("yourAge is greater than myAge"):console.log("myAge is less than yourAge");
+myAge > yourAge ? console.log("yourAge is greater than myAge") : console.log("myAge is less than yourAge");
 
 
 // 4. Check, if a number is even or not.
@@ -64,58 +64,66 @@ switch (month) {
     case 'September':
     case 'October':
     case 'November':
-      console.log('Rainy');
-      break;
+        console.log('Rainy');
+        break;
     case 'December':
     case 'January':
     case 'February':
-      console.log('Winter');
-      break;
+        console.log('Winter');
+        break;
     case 'March':
-      console.log('Spring');
-      break;
+        console.log('Spring');
+        break;
     case 'April':
     case 'May':
     case 'June':
     case 'July':
     case 'August':
-      console.log('Summer');
-      break;
+        console.log('Summer');
+        break;
     default:
-      console.log('Invalid input');
-  }
+        console.log('Invalid input');
+}
 
 // 7. Check if a day is weekend day or a working day. Your script will take day as an input.
-if(day === 'Saturday' || day === 'Sunday')
-  console.log("Its a weekend")
-else
-  console.log("Its a working day")
+switch (day.toLowerCase()) {
+    case 'monday':
+    case 'tuesday':
+    case 'wednessday':
+    case 'thursday':
+    case 'triday': console.log("Working day");
+                   break;
+    case 'saturday':
+    case 's.unday': console.log("Weekend");
+                    break;
+    default: console.log("Invalid Day");
+}
 
 
 // 8. Write a program which tells the number of days in a month.
 if (month === 1 || month === 3 || month === 5 || month === 7 || month === 8 || month === 10 || month === 12) {
     console.log("No of days are 31");
-  }
-  else if (month === 4 || month === 6 || month === 9 || month === 11) {
+}
+else if (month === 4 || month === 6 || month === 9 || month === 11) {
     console.log("No of days are 30");
-  }
-  else if (month === 2) {
+}
+else if (month === 2) {
     if (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) {
-      console.log("No of days are 29")
+        console.log("No of days are 29")
     } else {
         console.log("No of days are 28")
     }
-  }
-  else {
+}
+else {
     console.log("Invalid month")
-  }
+}
 // 9. Write a program to check whether the year is leap year or not.
-(year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0))?console.console.log("It's a leap year") :console.console.log("It's not a leap year")
+(year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) ? console.console.log("It's a leap year") : console.console.log("It's not a leap year")
 
 // 10. Write a JavaScript ternary expression that checks the following conditions:
 // If the first condition (condition1) is true, it should check the second condition (condition2). If condition2 is true, set the result to 'A', otherwise set it to 'B'.
 // If the first condition (condition1) is false, it should check another condition (condition3). If condition3 is true, set the result to 'C', otherwise set it to 'D'.
-condition1? condition2? result = 'A': result = 'B' : condition3? result = 'C': result = 'D';
+condition1 ? condition2 ? result = 'A' : result = 'B' : condition3 ? result = 'C' : result = 'D';
 
 // 11. What will be the result of the following nested ternary expression:
 // let result = true ? false ? true ? 'A' : 'B' : false ? 'C' : 'D' : 'E';
